@@ -1,5 +1,5 @@
 function changeText() {
-  document.getElementById("text").innerHTML = "Home section changed by JS";
+  document.getElementById("text").innerHTML = "Script changed by JS";
 }
 
 function reload() {

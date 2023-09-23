@@ -1,0 +1,12 @@
+.home {
+    color: darkcyan;
+}
+
+button {
+    border-radius: 25px;
+    border: 2px solid darkcyan;
+
+    &:hover {
+        background-color: darkcyan;
+    }
+}

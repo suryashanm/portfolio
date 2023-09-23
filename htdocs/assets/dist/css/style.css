@@ -1,3 +1,13 @@
 .home {
-    color: darkcyan;
+  color: darkcyan;
 }
+
+button {
+  border-radius: 25px;
+  border: 2px solid darkcyan;
+}
+button:hover {
+  background-color: darkcyan;
+}
+
+/*# sourceMappingURL=style.css.map */
