@@ -1,12 +1,17 @@
-.home {
-    color: darkcyan;
-}
+.sass{
+    h1{
+        color: green;
+    }
+    p{
+        color: purple;
+    }
 
-button {
-    border-radius: 25px;
-    border: 2px solid darkcyan;
-
-    &:hover {
-        background-color: darkcyan;
+    .indiv{
+        h1{
+            color: darkcyan;
+        }
+        p{
+            color: red;
+        }
     }
 }
