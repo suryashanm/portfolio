@@ -1,4 +1,4 @@
-/*Processed by SURYA on 26/9/2023@12:30:44*/
+/*Processed by SURYA on 3/10/2023@14:49:0*/
 .sass{
     h1{
         color: green;
@@ -14,6 +14,15 @@
         p{
             color: red;
         }
+    }
+}
+
+button {
+    border-radius: 25px;
+    border: 2px solid darkcyan;
+
+    &:hover {
+        background-color: darkcyan;
     }
 }
 //# sourceMappingURL=style.scss.map

@@ -20,10 +20,6 @@ module.exports = function (grunt) {
         sourceMap: true,
         banner: "/*Processed by SURYA on " + datetime + "*/\n",
       },
-      css: {
-        src: ["../css/**/*.css"],
-        dest: "dist/style.css",
-      },
       js: {
         src: ["../js/**/*.js"],
         dest: "dist/script.js",
@@ -39,15 +35,10 @@ module.exports = function (grunt) {
         mergeIntoShorthands: false,
         roundingPrecision: -1,
       },
-      css: {
-        files: {
-          "../../htdocs/assets/dist/css/style.css": ["dist/style.css"],
-        },
-      },
       scss: {
         files: {
-          "../../htdocs/assets/dist/css/main.css": [
-            "../../htdocs/assets/dist/css/main.css",
+          "../../htdocs/assets/dist/css/style.min.css": [
+            "../../htdocs/assets/dist/css/style.min.css",
           ],
         },
       },
@@ -59,7 +50,7 @@ module.exports = function (grunt) {
           style: "expanded",
         },
         files: {
-          "../../htdocs/assets/dist/css/main.css": "dist/style.scss",
+          "../../htdocs/assets/dist/css/style.min.css": "dist/style.scss",
         },
       },
     },
@@ -76,54 +67,41 @@ module.exports = function (grunt) {
     },
 
     copy: {
-      jquery: {
+      bcss: {
         files: [
           {
             expand: true,
             flatten: true,
             filter: "isFile",
-            src: ["bower_components/jquery/dist/*"],
-            dest: "../../htdocs/assets/dist/js/jquery/",
+            src: ["../bootstrap/css/*"],
+            dest: "../../htdocs/assets/dist/css/",
+          },
+        ],
+      },
+      bjs: {
+        files: [
+          {
+            expand: true,
+            flatten: true,
+            filter: "isFile",
+            src: ["../bootstrap/js/*"],
+            dest: "../../htdocs/assets/dist/js/",
           },
         ],
       },
     },
 
-    obfuscator: {
-      options: {
-        banner: "// obfuscated with grunt-contrib-obfuscator.\n",
-        debugProtection: true,
-        debugProtectionInterval: true,
-        domainLock: ["surya.selfmade.fun"],
-      },
-      task1: {
-        options: {
-          // options for each sub task
-        },
-        files: {
-          "../../htdocs/assets/dist/js/script.o.js": ["dist/script.js"],
-        },
-      },
-    },
-
     watch: {
-      css: {
-        files: ["../css/**/*.css"],
-        tasks: ["concat:css", "cssmin:css"],
-        options: {
-          spawn: false,
-        },
-      },
       js: {
         files: ["../js/**/*.js"],
-        tasks: ["concat:js", "uglify", "obfuscator"],
+        tasks: ["concat:js", "uglify"],
         options: {
           spawn: false,
         },
       },
       scss: {
         files: ["../scss/**/*.scss"],
-        tasks: ["concat:scss", "sass", "cssmin:scss"],
+        tasks: ["concat:scss", "sass", "cssmin"],
         options: {
           spawn: false,
         },
@@ -131,7 +109,6 @@ module.exports = function (grunt) {
     },
   });
 
-  grunt.loadNpmTasks("grunt-contrib-obfuscator");
   grunt.loadNpmTasks("grunt-contrib-copy");
   grunt.loadNpmTasks("grunt-contrib-watch");
   grunt.loadNpmTasks("grunt-contrib-concat");
@@ -141,11 +118,9 @@ module.exports = function (grunt) {
   grunt.registerTask("default", [
     "copy",
     "concat",
-    "cssmin:css",
+    "cssmin",
     "sass",
-    "cssmin:scss",
     "uglify",
-    "obfuscator",
     "watch",
   ]);
 };

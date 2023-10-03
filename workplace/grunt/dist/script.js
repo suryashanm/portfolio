@@ -1,6 +1,6 @@
-/*Processed by SURYA on 26/9/2023@12:30:44*/
+/*Processed by SURYA on 3/10/2023@14:49:0*/
 function changeText() {
-  document.getElementById("text").innerHTML = "Script changed by JS";
+  document.getElementById("text").innerHTML = "Script changed by JavaScript";
 }
 
 function reload() {
