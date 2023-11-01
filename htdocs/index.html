@@ -3,30 +3,56 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
+    <title>Surya - Portfolio</title>
+
+    <!-- Website icon -->
+    <link rel="shortcut icon" href="./assets/brand/favicon.ico" type="image/x-icon">
+
+    <!-- Apple touch icon -->
+    <link rel="apple-touch-icon" href="./assets/brand/apple-touch-icon.png">
 
     <!-- CSS -->
     <link rel="stylesheet" href="./assets/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="./assets/dist/css/style.min.css">
+    <link rel="stylesheet" href="./assets/dist/css/style.min.css" />
   </head>
 
-  <body>
-    <div class="container home">
-      <div class="sass">
-        <h1>Primary heading</h1>
-        <p>Primary paragraph</p>
-        <div class="indiv">
-          <h1>Secondary heading</h1>
-          <p>Secondary paragraph</p>
-        </div>
+  <body class="container">
+    <!-- Header -->
+    <header class="header">
+      <div class="logo">
+        <a href="#">
+          <!-- TODO: Add logo with correct size. -->
+          <!-- <img class="logo-icon" src="" alt="Logo" /> -->
+          <span class="logo-text">Portfolio</span>
+        </a>
       </div>
-      <h1 id="text">Initial script</h1>
-      <button onclick="changeText()">Click</button>
-      <button onclick="reload()">Reload</button>
+
+      <div class="hamburger-menu">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+
+      <nav class="menu">
+        <a class="nav-link" href="#">Home</a>
+        <a class="nav-link" href="#">About</a>
+        <a class="nav-link" href="#">Services</a>
+        <a class="nav-link" href="#">Contact</a>
+      </nav>
+
+      <div type="button" class="cv-file">
+          <a href="./assets/brand/apple-touch-icon.png" download>Download CV</a>
+      </div>
+    </header>
+
+    <!-- Content test -->
+    <div class="content">
+      <h1 class="name">SURYA</h1>
+      <h1 class="title">Full stack Developer</h1>
+      <p class="paragraph">I build accessible, inclusive products and digital experiences for the web.</p>
     </div>
 
     <!-- JS -->
-    <script src="./assets/dist/js/jquery/jquery.min.js"></script>
     <script src="./assets/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./assets/dist/js/script.min.js"></script>
   </body>

@@ -1,7 +1,9 @@
-function changeText() {
-  document.getElementById("text").innerHTML = "Script changed by JavaScript";
-}
+const hamburgerMenu = document.querySelector('.hamburger-menu');
+const menu = document.querySelector('.menu');
+const cv = document.querySelector('.cv-file');
 
-function reload() {
-  location.reload();
-}
+hamburgerMenu.addEventListener('click', function() {
+    this.classList.toggle('active');
+    menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+    cv.style.display = cv.style.display === 'flex' ? 'none' : 'flex';
+});

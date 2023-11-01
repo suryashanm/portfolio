@@ -1,10 +1,11 @@
-/*Processed by SURYA on 3/10/2023@14:49:0*/
-function changeText() {
-  document.getElementById("text").innerHTML = "Script changed by JavaScript";
-}
+/*Processed by SURYA on 1/11/2023@14:12:2*/
+const hamburgerMenu = document.querySelector('.hamburger-menu');
+const menu = document.querySelector('.menu');
+const cv = document.querySelector('.cv-file');
 
-function reload() {
-  location.reload();
-}
-
+hamburgerMenu.addEventListener('click', function() {
+    this.classList.toggle('active');
+    menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+    cv.style.display = cv.style.display === 'flex' ? 'none' : 'flex';
+});
 //# sourceMappingURL=script.js.map

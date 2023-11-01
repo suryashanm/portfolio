@@ -1,0 +1,6 @@
+$dark-primary: #1d2127;
+$dark-secondary: #252930;
+$text-primary: #d1d7e0;
+$text-secondary: #aaaeb6;
+$blue: #1d4ed8;
+$blue-violet: #4f46e5;
