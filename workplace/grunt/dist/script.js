@@ -1,4 +1,5 @@
-/*Processed by SURYA on 1/11/2023@14:12:2*/
+/*Processed by SURYA on 2/11/2023@9:20:45*/
+// Event listener for toggling hamburger menu, menu and CV file display on click.
 const hamburgerMenu = document.querySelector('.hamburger-menu');
 const menu = document.querySelector('.menu');
 const cv = document.querySelector('.cv-file');

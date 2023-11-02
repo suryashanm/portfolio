@@ -1,3 +1,4 @@
+// Event listener for toggling hamburger menu, menu and CV file display on click.
 const hamburgerMenu = document.querySelector('.hamburger-menu');
 const menu = document.querySelector('.menu');
 const cv = document.querySelector('.cv-file');
