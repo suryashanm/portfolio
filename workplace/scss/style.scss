@@ -29,8 +29,7 @@ body {
           color: $blue;
           font-size: 28px;
           font-weight: 600;
-          // TODO: Arial font family is used for logo, for future use change this.
-          font-family: Arial, Helvetica, sans-serif;
+          // TODO: Add a font family for logo-text.
         }
       }
     }
@@ -53,6 +52,7 @@ body {
 
     .cv-file {
       a {
+        font-size: 14px;
         color: $blue;
         text-decoration: none;
         border: 2px solid $blue;
@@ -133,33 +133,6 @@ body {
         text-align: center;
         background-color: $dark-primary;
       }
-
-
-    }
-  }
-
-  // Content section
-  // Info: Only for test purpose
-  .content {
-    z-index: -1;
-    padding: $space;
-    text-align: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    .name {
-      color: $text-primary
-    }
-
-    .title {
-      font-size: 24px;
-      color: $blue
-    }
-
-    .paragraph {
-      color: $text-secondary;
     }
   }
 }
