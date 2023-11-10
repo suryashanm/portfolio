@@ -1,4 +1,4 @@
-/*Processed by SURYA on 10/11/2023@12:26:51*/
+/*Processed by SURYA on 10/11/2023@12:59:22*/
 $dark-primary: #1d2127;
 $dark-secondary: #252930;
 $text-primary: #d1d7e0;
@@ -133,6 +133,10 @@ body {
         width: 100%;
         text-align: center;
         background-color: $dark-primary;
+        
+        a {
+          font-size: 14px;
+        }
       }
     }
   }

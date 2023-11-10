@@ -132,6 +132,10 @@ body {
         width: 100%;
         text-align: center;
         background-color: $dark-primary;
+        
+        a {
+          font-size: 14px;
+        }
       }
     }
   }
