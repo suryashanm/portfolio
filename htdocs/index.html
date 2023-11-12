@@ -20,9 +20,9 @@
     <!-- Header -->
     <header class="header">
       <div class="logo">
-        <a href="#">
-          <!-- TODO: Add logo with correct size. -->
-          <!-- <img class="logo-icon" src="" alt="Logo" /> -->
+        <a href="#home">
+          <!-- TODO: CHange logo. -->
+          <img class="logo-icon" src="./assets/brand/logo.jpg" alt="Logo" />
           <span class="logo-text">Surya</span>
         </a>
       </div>
@@ -34,16 +34,33 @@
       </div>
 
       <nav class="menu">
-        <a class="nav-link" href="#">Home</a>
-        <a class="nav-link" href="#">About</a>
-        <a class="nav-link" href="#">Services</a>
-        <a class="nav-link" href="#">Contact</a>
+        <a class="nav-link" href="#home">Home</a>
+        <a class="nav-link" href="#about">About</a>
+        <a class="nav-link" href="#projects">Projects</a>
+        <a class="nav-link" href="#contact">Contact</a>
       </nav>
 
       <div type="button" class="cv-file">
+        <!-- TODO: Place CV file link here instead of apple touch icon. -->
           <a href="./assets/brand/apple-touch-icon.png" download>Download CV</a>
       </div>
     </header>
+
+    <!-- Home -->
+    <div class="container" id="home">
+      <div class="hero">
+
+        <img src="./assets/brand/logo.jpg" alt="Home image">
+        
+        <h1><span>Hey I'm Surya</span></h1>
+        <h1>I enjoy creating things that live on the internet</h1>
+        <p>I'm a passionate web engineer eager to kickstart my career in the industry. My goal is to consistently create<br> visually appealing and accessible digital experiences.</p>
+
+        <button type="button"><a href="#about">Know more</a></button>
+        <!-- TODO: Place CV file link here instead of apple touch icon. -->
+        <button type="button"><a href="./assets/brand/apple-touch-icon.png" download>Download CV</a></button>
+      </div>
+    </div>
 
     <!-- JS -->
     <script src="./assets/dist/js/bootstrap.bundle.min.js"></script>

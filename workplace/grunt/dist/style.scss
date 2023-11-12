@@ -1,14 +1,14 @@
-/*Processed by SURYA on 10/11/2023@12:59:22*/
-$dark-primary: #1d2127;
-$dark-secondary: #252930;
-$text-primary: #d1d7e0;
-$text-secondary: #aaaeb6;
+/*Processed by SURYA on 12/11/2023@18:7:14*/
+$dark-primary: #000212;
+$dark-secondary: #030418;
+$text-primary: #ffffffd6;
+$text-secondary: #8f98b2;
 $blue: #1d4ed8;
-$blue-violet: #4f46e5;
-$space: 0px 10px;
+$skyblue: #3586f0;
 
 body {
   background-color: $dark-primary;
+  scroll-behavior: smooth;
 
   // Header
   .header {
@@ -19,16 +19,24 @@ body {
     top: 0;
     background-color: $dark-primary;
     height: 75px;
-    padding: $space;
+    // TODO: Add an user select to none.
 
     .logo {
       a {
         text-decoration: none;
         cursor: pointer;
 
+        img {
+          width: 32px;
+          height: 32px;
+          border-radius: 60%;
+          position: relative;
+          bottom: 5px;
+        }
+
         span {
           color: $blue;
-          font-size: 28px;
+          font-size: 24px;
           font-weight: 600;
           // TODO: Add a font family for logo-text.
         }
@@ -40,7 +48,7 @@ body {
 
       a {
         color: $text-primary;
-        padding: 0 15px;
+        padding: 0 5px 0 35px;
         font-size: 16px;
         transition: all 0.3s;
 
@@ -60,6 +68,7 @@ body {
         border-radius: 25px;
         padding: 8px 24px;
         background-color: $dark-primary;
+        transition: all 0.3s ease-in-out;
 
         &:hover {
           background-color: $blue;
@@ -84,7 +93,7 @@ body {
       }
     }
 
-    @media (max-width: 768px) {
+    @media only screen and (max-width: 768px) {
 
       .hamburger-menu {
         display: flex;
@@ -136,6 +145,54 @@ body {
         
         a {
           font-size: 14px;
+        }
+      }
+    }
+  }
+
+  // Home
+  #home {
+    text-align: center;
+
+    .hero {
+      position: relative;
+      top: 0px;
+      z-index: -1;
+      margin-top: 40px;
+
+      img {
+        width: 150px;
+        height: 150px;
+        border-radius: 60%;
+        margin-bottom: 40px;
+      }
+
+      h1 {
+
+        span {
+          color: $blue;
+        }
+        color: $text-primary;
+        font-size: 40px;
+        font-weight: 700;
+      }
+
+      p {
+        color: $text-secondary;
+        line-height: 27px;
+      }
+
+      button {
+        border: none;
+        border-radius: 25px;
+        padding: 8px 16px;
+        margin: 1px;
+        background: linear-gradient(to right, $blue, $skyblue);
+
+        a {
+          text-decoration: none;
+          font-size: 16px;
+          color: $text-primary;
         }
       }
     }
