@@ -1,10 +1,29 @@
-/*Processed by SURYA on 12/11/2023@18:7:14*/
+/*Processed by SURYA on 15/11/2023@9:34:58*/
+// Colors
 $dark-primary: #000212;
 $dark-secondary: #030418;
 $text-primary: #ffffffd6;
 $text-secondary: #8f98b2;
 $blue: #1d4ed8;
 $skyblue: #3586f0;
+
+// Button gradient
+@mixin gradient-button {
+  border: none;
+  border-radius: 25px;
+  padding: 8px 24px;
+  margin: 1px;
+  background: linear-gradient(to right, $blue, $skyblue);
+  color: $text-primary;
+}
+
+// Text gradient
+@mixin text-gradient {
+  background: linear-gradient(to right, $blue, $skyblue);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
 body {
   background-color: $dark-primary;
@@ -19,7 +38,6 @@ body {
     top: 0;
     background-color: $dark-primary;
     height: 75px;
-    // TODO: Add an user select to none.
 
     .logo {
       a {
@@ -62,18 +80,11 @@ body {
     .cv-file {
       a {
         font-size: 14px;
-        color: $blue;
+        color: $text-primary;
         text-decoration: none;
-        border: 2px solid $blue;
+        border: none;
         border-radius: 25px;
-        padding: 8px 24px;
-        background-color: $dark-primary;
-        transition: all 0.3s ease-in-out;
-
-        &:hover {
-          background-color: $blue;
-          color: $text-primary;
-        }
+        @include gradient-button;
       }
     }
 
@@ -94,7 +105,6 @@ body {
     }
 
     @media only screen and (max-width: 768px) {
-
       .hamburger-menu {
         display: flex;
 
@@ -121,7 +131,7 @@ body {
         top: 75px;
         left: 0;
         width: 100%;
-        height: 85vh;
+        height: 90vh;
         text-align: center;
         background-color: $dark-primary;
 
@@ -142,7 +152,7 @@ body {
         width: 100%;
         text-align: center;
         background-color: $dark-primary;
-        
+
         a {
           font-size: 14px;
         }
@@ -152,26 +162,18 @@ body {
 
   // Home
   #home {
-    text-align: center;
-
     .hero {
-      position: relative;
-      top: 0px;
-      z-index: -1;
-      margin-top: 40px;
-
       img {
         width: 150px;
         height: 150px;
         border-radius: 60%;
-        margin-bottom: 40px;
       }
 
       h1 {
-
         span {
-          color: $blue;
+          @include text-gradient;
         }
+
         color: $text-primary;
         font-size: 40px;
         font-weight: 700;
@@ -179,22 +181,56 @@ body {
 
       p {
         color: $text-secondary;
-        line-height: 27px;
       }
 
       button {
-        border: none;
-        border-radius: 25px;
-        padding: 8px 16px;
-        margin: 1px;
-        background: linear-gradient(to right, $blue, $skyblue);
+        @include gradient-button;
 
         a {
-          text-decoration: none;
           font-size: 16px;
           color: $text-primary;
         }
       }
+    }
+  }
+
+  // About
+  #about {
+    div {
+      h1 {
+        @include text-gradient;
+      }
+    }
+
+    .row {
+      .about-img {
+        img {
+          border-radius: 5px;
+        }
+      }
+
+      .about-text {
+        p {
+          color: $text-secondary;
+          font-size: 16px;
+
+          a {
+            color: $blue;
+          }
+        }
+      }  
+    }
+
+    // .skills {
+    //   text-align: center
+    // }
+
+  }
+
+  button {
+    @include gradient-button;
+    a {
+      color: $text-primary;
     }
   }
 }

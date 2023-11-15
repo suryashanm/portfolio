@@ -20,7 +20,7 @@
     <!-- Header -->
     <header class="header">
       <div class="logo">
-        <a href="#home">
+        <a href="#">
           <!-- TODO: CHange logo. -->
           <img class="logo-icon" src="./assets/brand/logo.jpg" alt="Logo" />
           <span class="logo-text">Surya</span>
@@ -34,32 +34,56 @@
       </div>
 
       <nav class="menu">
-        <a class="nav-link" href="#home">Home</a>
+        <a class="nav-link" href="#">Home</a>
         <a class="nav-link" href="#about">About</a>
         <a class="nav-link" href="#projects">Projects</a>
         <a class="nav-link" href="#contact">Contact</a>
       </nav>
 
       <div type="button" class="cv-file">
-        <!-- TODO: Place CV file link here instead of apple touch icon. -->
-          <a href="./assets/brand/apple-touch-icon.png" download>Download CV</a>
+        <!-- TODO: Place resume file link here instead of apple touch icon. -->
+          <a href="./assets/brand/apple-touch-icon.png" download>Resume</a>
       </div>
     </header>
 
     <!-- Home -->
-    <div class="container" id="home">
+    <div id="home" class="container text-center pb-5">
       <div class="hero">
 
-        <img src="./assets/brand/logo.jpg" alt="Home image">
+        <div class="py-5">
+          <img src="./assets/brand/logo.jpg" alt="Home image">
+        </div>
         
         <h1><span>Hey I'm Surya</span></h1>
         <h1>I enjoy creating things that live on the internet</h1>
         <p>I'm a passionate web engineer eager to kickstart my career in the industry. My goal is to consistently create<br> visually appealing and accessible digital experiences.</p>
 
-        <button type="button"><a href="#about">Know more</a></button>
-        <!-- TODO: Place CV file link here instead of apple touch icon. -->
-        <button type="button"><a href="./assets/brand/apple-touch-icon.png" download>Download CV</a></button>
+        <button type="button"><a href="#about" class="text-decoration-none">Know more</a></button>
       </div>
+    </div>
+
+    <!-- About -->
+    <div id="about" class="container py-5">
+      <div class="py-5">
+        <h1 class="text-center">About me</h1>
+      </div>
+
+      <div  class="row flex-lg-row-reverse align-items-center text-center">
+        <div class="col-lg-6 about-img">
+          <img src="./assets/brand/about.jpg" alt="About image" class="mb-md-5">
+        </div>
+        <div class="col-lg-6 about-text">
+          <p>Hello! My name is Surya. My interest in web development started back in 2021 when I decided to explore the fascinating world of technology. Since then I have develop myself to learning and gaining insights into this dynamic field.</p>
+          <p>In november 2023, I completed the web engineering course at <a href="https://www.selfmade.ninja" target="_blank" class="text-decoration-none">Selfmade ninja academy</a>, Where I gained extensive knowledge of the engineering behind the web.</p>
+
+          <button type="button">
+            <!-- TODO: Change the photo -->
+            <a class="text-decoration-none" href="./assets/brand/apple-touch-icon.png" download>Resume</a>
+          </button>
+        </div>
+      </div>
+
+      <!-- TODO: Skills -->
     </div>
 
     <!-- JS -->
