@@ -217,19 +217,24 @@ body {
             color: $blue;
           }
         }
-      }  
+      }
     }
 
-    // .skills {
-    //   text-align: center
-    // }
+    @media only screen and (max-width: 768px) {
+      .row {
+        .about-img {
+          img {
+            margin-bottom: 48px;
+          }
+        }
+      }
+    }
 
-  }
-
-  button {
-    @include gradient-button;
-    a {
-      color: $text-primary;
+    button {
+      @include gradient-button;
+      a {
+        color: $text-primary;
+      }
     }
   }
 }
