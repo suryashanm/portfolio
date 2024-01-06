@@ -24,6 +24,14 @@ $skyblue: #3586f0;
   -webkit-text-fill-color: transparent;
 }
 
+@mixin skill-bar($size) {
+  width: $size;
+  height: 4px;
+  background: linear-gradient(90deg, $blue, $skyblue);
+  border-radius: 25px;
+  text-align: center;
+}
+
 body {
   background-color: $dark-primary;
   scroll-behavior: smooth;
@@ -234,6 +242,65 @@ body {
       @include gradient-button;
       a {
         color: $text-primary;
+      }
+    }
+
+    // Skills
+    .skills {
+      div {
+        h3 {
+          @include text-gradient;
+        }
+      }
+
+      p {
+        color: $text-secondary;
+      }
+    }
+
+    .skill-content {
+      font-size: 12px;
+      color: $text-primary;
+    }
+
+    .progress-bar {
+      width: 100%;
+      background-color: $dark-secondary;
+      border: 1px solid $text-secondary;
+      padding: 1px;
+      border-radius: 25px;
+      overflow: hidden;
+
+      .html {
+        @include skill-bar(95%);
+      }
+
+      .css {
+        @include skill-bar(90%);
+      }
+
+      .js {
+        @include skill-bar(75%);
+      }
+
+      .php {
+        @include skill-bar(80%);
+      }
+
+      .c-lang {
+        @include skill-bar(70%);
+      }
+
+      .java {
+        @include skill-bar(75%);
+      }
+
+      .sql {
+        @include skill-bar(89%);
+      }
+
+      .mysql {
+        @include skill-bar(65%);
       }
     }
   }
